@@ -1,0 +1,38 @@
+<button (click)="select_file()">
+    Select file...
+  </button>
+  
+  <!-- <div style="border: solid 2px black; margin: 10px; padding: 10px;">
+    <span *ngFor="let data of file_data">({{data.char}} - {{data.hex}})</span>
+  </div> -->
+
+  <div class="editor">
+    <div class="address-section">
+
+    </div>
+    
+      <div class="hex-section">
+        <div  class="hex-row">
+
+          <div class="hex bit" *ngFor="let data of file_data">
+              {{data.hex}}
+          </div>
+
+        </div>
+      </div>
+      <div class="char-section">
+          <div  class="char-row">
+            <div class="char bit" *ngFor="let data of file_data">
+                {{data.char}}
+            </div>
+          </div>
+      </div>
+      <!-- <div class="encoding-section">
+        <div *ngFor="let group of hex_group; let i = index" class="char-row">
+          <div class="char bit" *ngFor="let data of group">
+              {{data.char}}
+          </div>
+          <br>
+        </div>
+      </div> -->
+    </div>
