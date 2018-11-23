@@ -10,23 +10,25 @@
     <div class="address-section">
 
     </div>
-    
+
       <div class="hex-section">
-        <div  class="hex-row">
 
-          <div class="hex bit" *ngFor="let data of file_data">
-              {{data.hex}}
-          </div>
-
+          <div *ngFor="let group of hex_group" class="hex-row">
+            <div *ngFor="let data of group" class="hex bit">
+                {{data.hex}}
+            </div>
+            <br>
         </div>
       </div>
       <div class="char-section">
-          <div  class="char-row">
-            <div class="char bit" *ngFor="let data of file_data">
-                {{data.char}}
+            <div *ngFor="let group of hex_group" class="char-row">
+              <div *ngFor="let data of group" class="char bit">
+                  {{data.char}}
+              </div>
+              <br>
             </div>
-          </div>
       </div>
+
       <!-- <div class="encoding-section">
         <div *ngFor="let group of hex_group; let i = index" class="char-row">
           <div class="char bit" *ngFor="let data of group">

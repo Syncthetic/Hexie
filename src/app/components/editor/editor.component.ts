@@ -11,7 +11,7 @@ export class EditorComponent implements OnInit {
   // public hex_data: string[]
   public file_data: object[]
   private hex_loop
-  public bits_per_row: number = 32
+  public bits_per_row: number = 16
 
   public hex_group: object[]
 
